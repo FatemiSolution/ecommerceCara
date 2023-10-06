@@ -14,6 +14,14 @@ import Sproduct from './components/Sproduct'
 
 function App() {
   const imageUrl = ['images/products/f2.jpg', 'images/products/f3.jpg','images/products/f4.jpg','images/products/f1.jpg'];
+  const removeActive = ()=>{
+    home.classList.remove('active');
+    blog.classList.remove('active');
+    about.classList.remove('active');
+    contact.classList.remove('active');
+    cart.classList.remove('active'); 
+    shop.classList.remove('active');
+  }
   return (
     <>
         <Router>
