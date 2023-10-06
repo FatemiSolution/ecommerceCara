@@ -3,23 +3,27 @@ import { useState } from 'react';
 function Sproduct(props) {
     const { imageUrl } = props;
     console.log(imageUrl)
-    const [imageSrc, setImageSrc] = useState('images/products/f1.jpg');
+    const [imageSrc, setImageSrc] = useState(imageUrl[0]);
     
     const handleClick = () => {
         // Change the image source when clicked
         setImageSrc(imageUrl[0]);
+        console.log(imageUrl[0]);
       };
     const handleClick1 = () => {
         // Change the image source when clicked
         setImageSrc(imageUrl[1]);
+        console.log(imageUrl[1]);
       };
     const handleClick2 = () => {
         // Change the image source when clicked
         setImageSrc(imageUrl[2]);
+        console.log(imageUrl[2]);
       };
     const handleClick3 = () => {
         // Change the image source when clicked
         setImageSrc(imageUrl[3]);
+        console.log(imageUrl[3]);
       };
   return (
     <>
@@ -29,16 +33,16 @@ function Sproduct(props) {
       <img src={imageSrc} width="100%" id="MainImg" alt=""/>  
       <div className="small-img-group">
         <div className="small-img-col">
-            <img src="images/products/f2.jpg" width="100%" onClick={handleClick}  className="small-img" alt=""/>
+            <img src={imageUrl[0]} width="100%" onClick={handleClick}  className="small-img" alt=""/>
         </div>
         <div className="small-img-col">
-            <img src="images/products/f3.jpg" width="100%" onClick={handleClick1} className="small-img" alt=""/>
+            <img src={imageUrl[1]} width="100%" onClick={handleClick1} className="small-img" alt=""/>
         </div>
         <div className="small-img-col">
-            <img src="images/products/f4.jpg" width="100%" onClick={handleClick2} className="small-img" alt=""/>
+            <img src={imageUrl[2]} width="100%" onClick={handleClick2} className="small-img" alt=""/>
         </div>
         <div className="small-img-col">
-            <img src="images/products/f1.jpg" width="100%" onClick={handleClick3} className="small-img" alt=""/>
+            <img src={imageUrl[3]} width="100%" onClick={handleClick3} className="small-img" alt=""/>
         </div>
       </div>
     

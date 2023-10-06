@@ -1,8 +1,9 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
 
-function Shop() {
+function Shop(props) {
    
+  
   return (
     <>
      <section className="page-header">
@@ -13,7 +14,7 @@ function Shop() {
        
         <div className="pro-container">
             <div className="pro"  >
-                <Link to='/sProduct'>
+                <Link to='/sProduct'onClick={()=>{props.getImg(['images/products/f1.jpg','images/products/f2.jpg','images/products/f3.jpg','images/products/f4.jpg'])}}>
                 <img src="images/products/f1.jpg" alt="" srcSet=""/>
                 <div className="des">
                     <span>addidas</span>
@@ -31,6 +32,7 @@ function Shop() {
                 </Link>
             </div>
             <div className="pro">
+            <Link to='/sProduct'onClick={()=>{props.getImg(['images/products/f2.jpg','images/products/f1.jpg','images/products/f3.jpg','images/products/f4.jpg'])}}>
                 <img src="images/products/f2.jpg" alt=""  srcSet=""/>
                 <div className="des">
                     <span>addidas</span>
@@ -45,6 +47,7 @@ function Shop() {
                     <h4>$78</h4>
                 </div>
                 <Link to="#"><i className="fa-solid fa-cart-shopping Cart"></i></Link>
+                </Link>
             </div>
             <div className="pro">
                 <img src="images/products/f3.jpg" alt="" srcSet=""/>
@@ -280,5 +283,7 @@ function Shop() {
     </>
   )
 }
-
+// Shop.propTypes = {
+//     getImg: PropTypes.array
+// }
 export default Shop

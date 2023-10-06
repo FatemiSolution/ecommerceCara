@@ -11,43 +11,37 @@ import Contact from './components/Contact'
 import Cart from './components/Cart'
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Sproduct from './components/Sproduct'
+import { useState } from 'react';
 
 function App() {
-  const imageUrl = ['images/products/f2.jpg', 'images/products/f3.jpg','images/products/f4.jpg','images/products/f1.jpg'];
-  const removeActive = ()=>{
-    home.classList.remove('active');
-    blog.classList.remove('active');
-    about.classList.remove('active');
-    contact.classList.remove('active');
-    cart.classList.remove('active'); 
-    shop.classList.remove('active');
+  const [imgUrl, setimgUrl] = useState([]);
+  const getImg=(a)=>{
+    setimgUrl(a);
   }
+  console.log(imgUrl)
+  // const imageUrl = [{imgUrl}, 'images/products/f3.jpg','images/products/f4.jpg','images/products/f1.jpg'];
+  // let a = Object.values(imgUrl)
+  // console.log(a)
+  
   return (
     <>
         <Router>
         <Navbar/>
       <Routes>
         <Route path="/" element={<Home/>}/>
-          <Route path="shop" element={<Shop />} />
+          <Route path="shop" element={<Shop getImg={getImg}/>} />
           <Route path="blog" element={<Blog/>} />
           <Route path="about" element={< About/>} />
           <Route path="contact" element={<Contact />} />
           <Route path="cart" element={<Cart />} />
-          <Route path="sProduct" element={<Sproduct imageUrl={imageUrl} setImg1={'images/products/f2.jpg'}setImg2={'images/products/f2.jpg'}setImg3={'images/products/f2.jpg'} />} />
+          <Route path="sProduct" element={<Sproduct imageUrl={imgUrl}  />} />
         
       </Routes>
       <Newsletter/>
       <Footer/>
     </Router>
 
-     {/* <Navbar/>
-     <Home />
-     <Shop/>
-     <Blog />
-     <About />
-     <Contact/>
-     <Newsletter />
-<Footer /> */}
+    
     </>
   )
 }
