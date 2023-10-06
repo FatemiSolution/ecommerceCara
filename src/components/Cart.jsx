@@ -19,12 +19,13 @@ function Cart() {
                 <td>SubTotal</td>
             </tr>
         </thead>
+        <tbody>
         <tr>
             <td><a href="#"><i className="fa-solid fa-circle-xmark"></i></a></td>
             <td><img src="images/products/f1.jpg" alt=""/></td>
             <td>Cartoon Astraunut T-Shirt</td>
             <td>$118.19</td>
-            <td><input type="number" value="1" name="" id=""/></td>
+            <td><input type="number" defaultValue={1}  name="" id=""/></td>
             <td>$118.19</td>
         </tr>
         <tr>
@@ -32,7 +33,7 @@ function Cart() {
             <td><img src="images/products/f2.jpg" alt=""/></td>
             <td>Cartoon Astraunut T-Shirt</td>
             <td>$118.19</td>
-            <td><input type="number" value="1" name="" id=""/></td>
+            <td><input type="number" defaultValue="1" name="" id=""/></td>
             <td>$118.19</td>
         </tr>
         <tr>
@@ -40,10 +41,9 @@ function Cart() {
             <td><img src="images/products/f3.jpg" alt=""/></td>
             <td>Cartoon Astraunut T-Shirt</td>
             <td>$118.19</td>
-            <td><input type="number" value="1" name="" id=""/></td>
+            <td><input type="number" defaultValue="1" name="" id=""/></td>
             <td>$118.19</td>
         </tr>
-        <tbody>
             
         </tbody>
     </table>
@@ -59,6 +59,7 @@ function Cart() {
     <div id="subtotal">
         <h3>Cart Total</h3>
         <table>
+            <tbody style={{border:'none'}}>
             <tr>
                 <td>Cart subtotal</td>
                 <td>$ 335</td>
@@ -71,7 +72,7 @@ function Cart() {
                 <td><strong>Total</strong></td>
                 <td><strong>$ 335</strong></td>
             </tr>
-
+</tbody>
         </table>
         <button className="normal">proceed to checkout</button>
     </div>

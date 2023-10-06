@@ -41,7 +41,7 @@ import React from 'react'
   <h2>Featured Products</h2>
   <p>Summer collection new modern designs</p>
   <div className="pro-container">
-      <div className="pro"  onClick={"window.location.href='sproduct.html'"}>
+      <div className="pro">
           <img src="images/products/f1.jpg" alt="" srcSet=''/>
           <div className="des">
               <span>addidas</span>

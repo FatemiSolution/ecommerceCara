@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom';
+import { Link  } from 'react-router-dom';
 
 function Shop(props) {
    
@@ -14,7 +14,7 @@ function Shop(props) {
        
         <div className="pro-container">
             <div className="pro"  >
-                <Link to='/sProduct'onClick={()=>{props.getImg(['images/products/f1.jpg','images/products/f2.jpg','images/products/f3.jpg','images/products/f4.jpg'])}}>
+                <Link style={{listStyle:'none',textDecoration:'none'}} to='/sProduct'onClick={()=>{props.getImg(['images/products/f1.jpg','images/products/f2.jpg','images/products/f3.jpg','images/products/f4.jpg'])}}>
                 <img src="images/products/f1.jpg" alt="" srcSet=""/>
                 <div className="des">
                     <span>addidas</span>
@@ -28,11 +28,11 @@ function Shop(props) {
                     </div>
                     <h4>$78</h4>
                 </div>
-                <Link to="#"><i className="fa-solid fa-cart-shopping Cart"></i></Link>
+                <i className="fa-solid fa-cart-shopping Cart"></i>
                 </Link>
             </div>
             <div className="pro">
-            <Link to='/sProduct'onClick={()=>{props.getImg(['images/products/f2.jpg','images/products/f1.jpg','images/products/f3.jpg','images/products/f4.jpg'])}}>
+            <Link style={{listStyle:'none',textDecoration:'none'}} to='/sProduct'onClick={()=>{props.getImg(['images/products/f2.jpg','images/products/f1.jpg','images/products/f3.jpg','images/products/f4.jpg'])}}>
                 <img src="images/products/f2.jpg" alt=""  srcSet=""/>
                 <div className="des">
                     <span>addidas</span>
@@ -46,7 +46,7 @@ function Shop(props) {
                     </div>
                     <h4>$78</h4>
                 </div>
-                <Link to="#"><i className="fa-solid fa-cart-shopping Cart"></i></Link>
+                <i className="fa-solid fa-cart-shopping Cart"></i>
                 </Link>
             </div>
             <div className="pro">
@@ -283,7 +283,5 @@ function Shop(props) {
     </>
   )
 }
-// Shop.propTypes = {
-//     getImg: PropTypes.array
-// }
+
 export default Shop
