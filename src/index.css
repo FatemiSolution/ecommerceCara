@@ -137,6 +137,9 @@ button.normal {
    left: 0;
 
 }
+#bar {
+    cursor: pointer;
+}
 .nav-list {
     display: flex;
     align-items: center;

@@ -1,6 +1,12 @@
 import React from 'react'
 import { Link } from "react-router-dom";
 function navbar() {
+ const barlistner = ()=> {
+document.getElementById('navlist').classList.add('active');
+  };
+  const closeListner = ()=> {
+  document.getElementById('navlist').classList.remove('active');
+  }
   return (
     <>
     <section className="header">
@@ -13,13 +19,13 @@ function navbar() {
                 <li><Link to="/about">About</Link></li>
                 <li><Link to="/contact">Contact</Link></li>
                 <li><Link to="/cart" id="lg-bag"><i className="fa-solid fa-bag-shopping"></i></Link></li>
-                <Link to="#" id="close"><i className="fa-regular fa-rectangle-xmark"></i></Link>
+                <Link to="#" id="close" onClick={closeListner}><i className="fa-regular fa-rectangle-xmark"></i></Link>
             </ul>
         </div>
         <div className="mobile">
             
             <Link to="Cart.html"><i className="fa-solid fa-bag-shopping" ></i></Link>
-            <i id="bar" className="fa-solid fa-bars"></i>
+            <i id="bar" className="fa-solid fa-bars" onClick={barlistner}></i>
         </div>
     </section>
     </>
